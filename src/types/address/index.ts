@@ -17,3 +17,17 @@ export class Address implements IAddress{
     this.city = city;
   }
 }
+
+type tAddress = {
+  street: string;
+  code: number;
+  province: string;
+  city: string;
+}
+
+const myAddy : tAddress = {
+  street: "",
+  code: 105102,
+  province: "",
+  city: ""
+}

@@ -1,7 +1,7 @@
 import {Cart, NewCart} from "../cart";
-import {Address } from '../types/addess';
+import {Address } from '../types/address';
 import {Item} from "../types/item"
-import {CartTotal} from "../types/total";
+// import {CartTotal} from "../types/total";
 
 export default class shoppingService{
 
@@ -14,7 +14,8 @@ export default class shoppingService{
     }
 
     static createNewCart(myAddress: Address){
-        return NewCart(myAddress, []);
+        // return NewCart(myAddress, []);
+        return new Cart(myAddress, []);
     }
 
     static removeItemsFromCart(mycart: Cart, myItems: Item[]): Cart {
@@ -28,15 +29,15 @@ export default class shoppingService{
         return mycart;
     }
 
-    static checkoutCart(mycart: Cart){
-        let amount = 0;
-        // let myTotal = new CartTotal (12,13);
-        let currentItems = mycart.items;
-        for (var item of currentItems){
-            amount +=  item.price;
-        }
-        return amount;
-    }
+    // static checkoutCart(mycart: Cart){
+    //     let amount = 0;
+    //     // let myTotal = new CartTotal (12,13);
+    //     let currentItems = mycart.items;
+    //     for (var item of currentItems){
+    //         amount +=  item.price;
+    //     }
+    //     return amount;
+    // }
 
     
 }
